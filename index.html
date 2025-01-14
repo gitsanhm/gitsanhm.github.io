@@ -1,3 +1,193 @@
-hello world
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BotKeting - AI Chatbot Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --red: #ff0000;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
+        body {
+            background-color: var(--black);
+            color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--red);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(45deg, rgba(0,0,0,0.9), rgba(255,0,0,0.1));
+        }
+
+        .hero-content {
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .highlight {
+            color: var(--red);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,0,0,0.1);
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(45deg, var(--red), var(--black));
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: var(--red);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">BotKeting</div>
+            <div class="button">Contactar</div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Revoluciona tu negocio con <span class="highlight">Chatbots IA</span> 24/7</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">
+                Automatiza tu atención al cliente con inteligencia artificial avanzada
+            </p>
+            <a href="#contact" class="button">Solicitar Demo</a>
+        </div>
+    </section>
+
+    <section class="services container">
+        <h2 style="text-align: center; margin-bottom: 50px;">Nuestros Servicios</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3 style="color: var(--red);">Chatbots 24/7</h3>
+                <p>Atención al cliente automatizada las 24 horas del día, los 7 días de la semana.</p>
+            </div>
+            <div class="service-card">
+                <h3 style="color: var(--red);">IA Avanzada</h3>
+                <p>Tecnología de última generación para conversaciones naturales y efectivas.</p>
+            </div>
+            <div class="service-card">
+                <h3 style="color: var(--red);">Personalización Total</h3>
+                <p>Adaptamos el chatbot a tu marca y necesidades específicas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2 style="margin-bottom: 30px;">¿Listo para automatizar tu atención al cliente?</h2>
+            <p style="margin-bottom: 30px;">Únete a las empresas que ya están utilizando nuestros chatbots IA</p>
+            <a href="#contact" class="button">Empezar Ahora</a>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.style.backgroundColor = window.scrollY > 50 ? 'rgba(0,0,0,0.9)' : 'transparent';
+        });
+    </script>
+</body>
+</html>
