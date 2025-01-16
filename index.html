@@ -90,12 +90,14 @@
             background: rgba(255,255,255,0.05);
             padding: 30px;
             border-radius: 10px;
-            transition: transform 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         .service-card:hover {
             transform: translateY(-10px);
             background: rgba(255,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(255,0,0,0.1);
         }
 
         /* CTA Section */
@@ -113,18 +115,63 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: 600;
-            transition: transform 0.3s;
+            transition: all 0.3s ease;
+            border: 2px solid var(--red);
         }
 
         .button:hover {
             transform: scale(1.05);
+            background: transparent;
+            border-color: var(--red);
+        }
+        /* Responsive Design */
+  /* Footer styles */
+  .footer {
+            background: rgba(0,0,0,0.95);
+            padding: 60px 0 30px;
+            margin-top: 50px;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            color: var(--red);
+            margin-bottom: 20px;
+        }
+
+        .footer-section p {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--red);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            font-size: 20px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
     </style>
 </head>
@@ -171,6 +218,30 @@
             <a href="#contact" class="button">Empezar Ahora</a>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BotKeting</h3>
+                    <p>Soluciones de chatbots IA para tu negocio</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-phone"></i> +593 98 475 3641</p>
+                    <p><i class="fas fa-envelope"></i> contacto@botketing.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Herrera Muñoz Santiago Paul. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
         // Smooth scroll
